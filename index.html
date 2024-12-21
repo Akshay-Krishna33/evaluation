@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Button clicked!");
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const username = document.getElementById("username").value;
+            alert("Form submitted! Username: " + username);
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello, welcome to my Basic HTML Page</h1>
+    <p>This is a simple HTML page to demonstrate the basic structure of an HTML document.</p>
+    
+    <h2>Login Form</h2>
+    <form onsubmit="submitForm(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+</html>
